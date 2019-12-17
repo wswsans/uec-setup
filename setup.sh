@@ -29,7 +29,7 @@ source ~/.zshrc
 
 #Pythonのインストール
 pyenv install
-pyenv install $(pyenv install -l | grep 'anaconda3-' | grep -e '\s3*' | tail -1)
+pyenv install $(pyenv install -l | grep -v '[a-zA-Z]' | grep -e '\s3\.?*' | tail -1)
 
 #zshの補完
 brew install zsh-completions
